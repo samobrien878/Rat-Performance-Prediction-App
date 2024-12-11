@@ -189,13 +189,13 @@ if st.button("Predict Performance"):
 
         # Determine dynamic graph title and color
         if poor_count >= 2:
-            graph_title = "The Predicted performance of this rat is NOT PROFICIENT"
+            graph_title = "The predicted performance of this rat is NOT PROFICIENT"
             graph_color = "red"
         elif poor_count == 1:
-            graph_title = "The Predicted performance of this rat is GENERALLY PROFICIENT"
+            graph_title = "The predicted performance of this rat is GENERALLY PROFICIENT"
             graph_color = "orange"
         else:
-            graph_title = "The Predicted performance of this rat is PROFICIENT"
+            graph_title = "The predicted performance of this rat is PROFICIENT"
             graph_color = "green"
 
         # Create pie chart
