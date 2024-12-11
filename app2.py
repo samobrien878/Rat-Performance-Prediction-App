@@ -113,21 +113,22 @@ st.markdown(
 # Load the Random Forest models
 @st.cache_resource
 def load_models():
-    # Update the model file paths
+    # Update the model file paths to use relative paths
     model_files = {
-        "Performance": r"C:\Users\obrie\Python Senior Thesis\RandomForest_Performance.joblib",
-        "Match": r"C:\Users\obrie\Python Senior Thesis\RandomForest_Match.joblib",
-        "Latency_Sample": r"C:\Users\obrie\Python Senior Thesis\RandomForest_Latency_Sample.joblib",
-        "Latency_Match": r"C:\Users\obrie\Python Senior Thesis\RandomForest_Latency_Match.joblib",
+        "Performance": "RandomForest_Performance.joblib",
+        "Match": "RandomForest_Match.joblib",
+        "Latency_Sample": "RandomForest_Latency_Sample.joblib",
+        "Latency_Match": "RandomForest_Latency_Match.joblib",
     }
     models = {}
     for model_name, file_path in model_files.items():
         try:
             models[model_name] = joblib.load(file_path)
         except FileNotFoundError:
-            st.error(f"Model file for {model_name} not found. Please ensure the model file is located at '{file_path}'.")
+            st.error(f"Model file for {model_name} not found. Please ensure the model file '{file_path}' is in the repository.")
             models[model_name] = None
     return models
+
 
 
 # Streamlit UI setup
