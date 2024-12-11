@@ -185,7 +185,7 @@ if st.button("Predict Performance"):
         }
 
         # Calculate overall performance
-        poor_count = prediction_counts["Poor"]
+        poor_count = prediction_counts["Not Proficient"]
 
         # Determine dynamic graph title and color
         if poor_count >= 2:
