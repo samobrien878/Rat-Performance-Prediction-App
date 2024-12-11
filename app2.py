@@ -180,8 +180,8 @@ if st.button("Predict Performance"):
 
         # Count occurrences of each prediction category
         prediction_counts = {
-            "Okay/Good": sum(pred == "Okay/Good" for pred in predictions.values()),
-            "Poor": sum(pred == "Poor" for pred in predictions.values())
+            "Proficient": sum(pred == "Okay/Good" for pred in predictions.values()),
+            "Not Proficient": sum(pred == "Poor" for pred in predictions.values())
         }
 
         # Calculate overall performance
