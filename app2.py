@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 #cd "C:\Users\obrie\Python Senior Thesis"
 
 
+
 # Set Streamlit page configuration
 st.set_page_config(page_title="Williams Behavioral Neuroscience Lab: Rat Assessment App", page_icon="🐭", layout="centered")
 
